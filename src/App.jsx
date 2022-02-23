@@ -1,24 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import {useState} from 'react';
+
+import TodoCreator from './TodoCreator';
+import TodoList from './TodoList';
+
 function App() {
+  const [todos, setTodos] = useState([{ id: 0, text: 'Wash the dog', isDone: false }, { id: 1, text: 'Pet the cat', isDone: false }]);
+  
   return (
     <>
       <div className="container border bg-light p-4 m-4">
-        {/* <h1 class="display-1">Hallo, Welt!</h1> */}
-        <form>
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter text here"
-            />
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">
-                Add
-              </button>
-            </div>
-          </div>
-        </form>
+        <h1 className="display-1">Hallo, Welt!</h1>
+        <TodoCreator />
+        <TodoList todos={todos}/>
       </div>
     </>
   );
