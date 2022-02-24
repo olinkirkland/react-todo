@@ -15,8 +15,8 @@ export default function TodoCreator({ todos, addTodo }) {
 
   return (
     <>
-      <p>Todo Creator</p>
-      <div className="input-group mb-3">
+      
+      <div className="input-group mb-5 mt-5">
         <input
           type="text"
           className="form-control"
