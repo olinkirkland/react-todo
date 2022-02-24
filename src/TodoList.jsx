@@ -1,10 +1,8 @@
 import TodoItem from './TodoItem';
 
 export default function TodoList({ todos }) {
-  console.log(todos);
-
   return (
-    <ul>
+    <ul className="list-group">
       {todos.map((t) => (
         <TodoItem key={t.id} todo={t} />
       ))}
